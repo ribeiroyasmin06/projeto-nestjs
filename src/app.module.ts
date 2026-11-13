@@ -9,6 +9,8 @@ import { MediaController } from './media/media.controller.js';
 import { SegurancaController } from './seguranca/seguranca.controller.js';
 import { AdminController } from './admin/admin.controller.js';
 import { LoggerMiddleware } from './logger/logger.middleware.js';
+import { ProdutosController } from './produtos/produtos.controller.js';
+import { ProdutosService } from './produtos/produtos.service.js';
 
 @Module({
   imports: [],
@@ -19,8 +21,9 @@ import { LoggerMiddleware } from './logger/logger.middleware.js';
     MediaController,
     SegurancaController,
     AdminController,
+    ProdutosController,
   ],
-  providers: [AppService, ConvidadosService, LivrosService],
+  providers: [AppService, ConvidadosService, LivrosService, ProdutosService],
 })
 
 export class AppModule implements NestModule {
